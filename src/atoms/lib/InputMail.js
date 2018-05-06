@@ -4,21 +4,25 @@ import PropTypes from "prop-types";
 
 export default class InputMail extends Component {
 
+	componentDidMount(){
+   		$(document).ready(function() {
+    		M.updateTextFields();
+  		});
+	}
 	render(){
-
 		const {type,id,className,value, onchange, placeholder}= this.props;
 		return(
-			<input
-			id={id}
-			className={`inputMail ${className}`}
-			onchange={onchange}
-			placeholder={"xxxxx@xxx.com.br"}
-			value={value}
-			type={type}
-			/>
+	
+			<div className="input-field" >
+      			<input id="id"
+				onChange={onchange}
+				value={value}
+				type={type || "text"}
+				className="validate"/>
+	          <label htmlFor="id">Email</label>
+	        </div>
 		);
 	}	
-
 }
 
 InputMail.PropTypes={
