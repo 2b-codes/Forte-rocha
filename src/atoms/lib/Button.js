@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class button extends Component{
+export default class Button extends Component{
 
 	render(){
 
-		const {children, onClick, id, className ,type} =this.props;
+		const {children, onClick, id, className ,type}=this.props;
 		return (
-			<button id={id} className={`button ${className}`} onClick={onClick} type={type}>name</button>
+			
+			<a className="waves-effect waves-light btn"  id={id} onClick={onClick} type={type}></a>
 		);
 		
 	}	
 
 }
 
-button.propTypes={
+Button.propTypes={
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.node.isRequired,
 	onClick: PropTypes.func.isRequired,

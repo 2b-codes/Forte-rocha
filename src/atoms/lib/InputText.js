@@ -12,7 +12,6 @@ export default class InputText extends Component{
 				id={ id }
 				className={`input-text ${className}`} 
 				value={ value }
-				placeholder= { placeholder }
 				onchange= {onchange}
 
 			/>

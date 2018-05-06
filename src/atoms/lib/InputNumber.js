@@ -31,5 +31,6 @@ InputNumber.propTypes = {
 	id: PropTypes.string.isRequired,
 	onChange: PropTypes.func.isRequired,
 	value: PropTypes.string.isRequired,
-	placeholder: PropTypes.string
+	row:PropTypes.string.isRequired,
+	cols:PropTypes.string.isRequired
 };
