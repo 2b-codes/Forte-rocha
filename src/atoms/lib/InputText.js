@@ -6,16 +6,21 @@ export default class InputText extends Component{
 	render(){
 		const{ id, className, value, placeholder, type, onchange }= this.props;
 		return(
-			<input
 
-				type={type || "text"} 
+			<div className="input-field col s6"> 
+				<input
+
+				type={"text"} 
 				id={ id }
-				className={`input-text ${className}`} 
+				className={`validate${className}`} 
 				value={ value }
 				onchange= {onchange}
 
-			/>
 
+				/>
+				<label for="first_name">First Name</label>
+
+		</div>
 		);
 	}
 

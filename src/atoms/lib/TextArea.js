@@ -2,29 +2,30 @@ import React, { Component } from "react";
 import PropTypes from"prop-types";
 
 
-export default class Textarea extends Component {
+export default class TextArea extends Component {
 
-	renderInput() {
+	render() {	
+	
 		const { id, placeholder, onChange, value, className, rows } = this.props;
 		return (
-			<textarea
+			 <div class="input-field col s12">
+				<textarea
 				id={id}
 				placeholder={placeholder}
 				onChange={onChange}
-				className={`textarea ${className}`}
+				className={"materialize-textarea"}
 				value={ value }
-				rows={rows || "4"}
-			> 
-			</textarea>
+				
+				> 
+				</textarea>
+			</div>
 		);
+	
 	}
-
-	render() {
-		return <div className="input-group">{this.renderInput()}</div>;
-	}
+	
 }
 
-Textarea.propTypes = {
+TextArea.propTypes={
 	id: PropTypes.string.isrequired,
 	placeholder: PropTypes.string.isrequired,
 	onChange: PropTypes.func.isrequired,

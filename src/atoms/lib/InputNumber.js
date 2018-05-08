@@ -9,17 +9,24 @@ export default class InputNumber extends Component{
 	render(){
 		const{id,className,onchange,value,type, placeholder}= this.props;
 		return(
-				
-				<InputMask
+				<div className="input-field col s6">
+				 <i className="material-icons prefix">phone</i>
+				  
+					<InputMask
 					type="tel" 
-					id={id} 
+					id="icon_telephone"
 					value={value} 
+					className="validate"
 					
 					placeholder={placeholder}
 					
-					 {...this.props} mask="+55 (99) 9 9999-9999" maskChar="" 
+					 {...this.props} mask={"+55 (99) 9 9999-9999"}maskChar="" 
 
 				/> 
+
+ 				<label for="icon_telephone">Telephone</label>
+				</div>
+				
 				
 			
 		);
