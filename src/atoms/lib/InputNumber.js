@@ -7,28 +7,29 @@ export default class InputNumber extends Component{
 
 
 	render(){
-		const{id,className,onchange,value,type, placeholder}= this.props;
+		const {
+			id,
+			className,
+			handleChange,
+			value,
+			type,
+			placeholder,
+			icon
+		} = this.props;
+
 		return(
-				<div className="input-field col s6">
-				 <i className="material-icons prefix">phone</i>
-				  
-					<InputMask
+			<div className={`input-field ${className}`}>
+				{!icon || <i className={`material-icons ${icon}`}>{icon}</i>}
+				<InputMask
 					type="tel" 
-					id="icon_telephone"
+					id={id}
 					value={value} 
 					className="validate"
-					
-					placeholder={placeholder}
-					
-					 {...this.props} mask={"+55 (99) 9 9999-9999"}maskChar="" 
-
+					mask={"+55 (99) 9 9999-9999"}
+					onChange={handleChange}
 				/> 
-
- 				<label for="icon_telephone">Telephone</label>
-				</div>
-				
-				
-			
+				<label className={`${icon && " label-input"}`} htmlFor={id}>{placeholder || "Telefone"}</label>
+			</div>
 		);
 	}
 }
@@ -36,7 +37,7 @@ export default class InputNumber extends Component{
 InputNumber.propTypes = {
 	className: PropTypes.string,
 	id: PropTypes.string.isRequired,
-	onChange: PropTypes.func.isRequired,
+	handleChange: PropTypes.func.isRequired,
 	value: PropTypes.string.isRequired,
 	row:PropTypes.string.isRequired,
 	cols:PropTypes.string.isRequired

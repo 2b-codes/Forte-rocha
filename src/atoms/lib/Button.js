@@ -5,10 +5,15 @@ export default class Button extends Component{
 
 	render(){
 
-		const {children, onClick, id, className ,type}=this.props;
+		const {
+			children,
+			onClick,
+			id,
+			className,
+			type
+		} = this.props;
 		return (
-			
-			<a className="waves-effect waves-light btn"  id={id} onClick={onClick} type={type}></a>
+			<button type={type} className="waves-effect waves-light btn" id={id} onClick={onClick} >{children}</button>
 		);
 		
 	}	

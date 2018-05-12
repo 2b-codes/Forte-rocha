@@ -9,9 +9,10 @@ export default class Logo extends Component {
 		const{className,id,src}=this.props;
 
 		return(
-			<img src= {src} 
-			className={`logo ${className}`}
-			id={id}
+			<img 
+				src= {src} 
+				className={`logo ${className}`}
+				id={id}
 			/>
 		);
 	}

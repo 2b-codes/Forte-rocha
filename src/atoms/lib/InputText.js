@@ -1,33 +1,37 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export default class InputText extends Component{
+export default class InputText extends React.Component{
 
 	render(){
-		const{ id, className, value, placeholder, type, onchange }= this.props;
+		const {
+			id,
+			className,
+			value,
+			type,
+			handleChange,
+			placeholder,
+			icon
+		} = this.props;
 		return(
-
-			<div className="input-field col s6"> 
+			<div className={`input-field ${className}`}> 
+				{icon && <i className={`material-icons ${icon}`}>{icon}</i>}
 				<input
-
-				type={"text"} 
-				id={ id }
-				className={`validate${className}`} 
-				value={ value }
-				onchange= {onchange}
-
-
+					type="text"
+					id={id}
+					className="validate"
+					value={value}
+					onChange={handleChange}
 				/>
-				<label for="first_name">First Name</label>
-
-		</div>
+				<label className={`${icon && " label-input"}`} htmlFor={id}>{placeholder}</label>
+			</div>
 		);
 	}
 
 }
 
 InputText.propTypes = {
-	onchange: PropTypes.string.isRequired,
+	handleChange: PropTypes.string.isRequired,
 	className: PropTypes.string,
 	id: PropTypes.string.isRequired,
 	value: PropTypes.string.isRequired
