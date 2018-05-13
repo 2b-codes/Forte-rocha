@@ -9,6 +9,8 @@ import SubTitle from "./lib/SubTitle";
 import Picture from "./lib/Picture";
 import Logo from "./lib/Logo";
 import Icon from "./lib/Icon";
+import Dropdown from "./lib/Dropdown";
+
 export{
 	Button,
 	InputText,
@@ -20,6 +22,6 @@ export{
 	SubTitle,
 	Picture,
 	Logo,
-	Icon
-
+	Icon,
+	Dropdown
 };

@@ -6,16 +6,16 @@ const sourcemaps = require("gulp-sourcemaps");
 const mmq = require("gulp-merge-media-queries");
 
 gulp.task("default", ["style"], () => {
-	gulp.watch("stylesheets/**/*", ["style"])
+	gulp.watch("stylesheets/**/*", ["style"]);
 });
 
 gulp.task("style", () => {
 	return gulp.src("stylesheets/index.styl")
-	.pipe(sourcemaps.init())
+		.pipe(sourcemaps.init())
 		.pipe(stylus({compress: true, "include css": true}))
 		.pipe(mmq())
 		.pipe(clean())
 		.pipe(rename("bundle.min.css"))
-	.pipe(sourcemaps.write())
-	.pipe(gulp.dest("public/build"))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest("public/build"));
 });

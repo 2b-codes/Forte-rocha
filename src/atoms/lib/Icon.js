@@ -9,7 +9,7 @@ export default class Icon extends Component{
 		const{className, children,id}=this.props;
 		return(
 			// <div className="input-field col s6"> 
-				<i className={"material-icons"}>{children}</i>
+			<i className={"material-icons"}>{children}</i>
 		//  </div>
 		);
 	}
