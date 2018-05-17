@@ -1,0 +1,79 @@
+.footer
+  color #FFF
+  background-color $black
+  position relative
+  .first-line
+    height 250px
+    padding 50px 25px 25px 25px
+    @media screen and (min-width: 320px) and (max-width: 450px)
+      text-align center
+      height 400px
+    .company-area
+      width 400px
+      display inline-block
+      vertical-align middle
+      @media screen and (max-width: 600px) and (min-width: 451px)
+        width 250px
+        text-align center
+      @media screen and (min-width: 320px) and (max-width: 450px)
+        display block
+        width 100%
+        text-align center
+      .material-placeholder
+        @media screen and (max-width: 600px) and (min-width: 451px)
+          text-align center
+          margin-bottom  15px
+      .company-description
+        @media screen and (max-width: 600px) and (min-width: 451px)
+          display block
+          text-align center
+      
+      .material-placeholder
+        display inline-block
+        vertical-align middle
+      .company-description
+        display inline-block
+        vertical-align middle
+        .company 
+          display block
+          text-align left
+          padding-left 15px
+          &.-name
+            font-size 1em
+            letter-spacing .7em
+            margin-bottom 20px
+          &.-slogan
+            font-size .8em
+            line-height 1.03em
+          &.-slogan
+          &.-name
+            @media screen and (max-width: 600px) and (min-width: 451px)
+              text-align center
+            margin-bottom 5px
+    .contact-area
+      width 139px
+      display inline-block
+      vertical-align middle
+      float right
+      @media screen and (min-width: 320px) and (max-width: 450px)
+        width 100%
+        margin-top 25px
+        display block
+      .title
+        font-weight 700
+        margin 5px 0
+      .email
+      .phone
+        margin 2px 0
+        font-weight 300
+  .second-line
+    text-align center
+    bottom 0
+    position absolute
+    width: 100%
+    margin-bottom 15px
+    .2b-codes
+      // font-family "Times New Roman", serif
+      font-family 'Times New Roman', sans-serif
+      letter-spacing .5em
+      font-size .7em

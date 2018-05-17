@@ -1,23 +1,5 @@
 import React from "react";
-import {
-	BackGround,
-	Button,
-	Icon,
-	InputMail,
-	InputNumber,
-	InputText,
-	Logo,
-	Picture,
-	SubTitle,
-	TextArea,
-	Dropdown,
-	/* Title */
-} from "../atoms";
-import {
-	searchBar,
-	/* Title_Subtitle */
-} from "../molecules";
-
+import Footer from "../organisms/lib/Footer";
 import InputMask from "react-input-mask";
 
 export default class Welcome extends React.Component {
@@ -42,35 +24,20 @@ export default class Welcome extends React.Component {
 
 	render(){
 
-		const array = [
-			{
-				id: "1",
-				label: "1",
-			},
-			{
-				id: "2",
-				label: "2",
-			},
-			{
-				id: "3",
-				label: "3",
-			},
-			{
-				id: "4",
-				label: "4",
-			},
-			{
-				id: "5",
-				label: "5",
-			},
-		];
-
 		return(			
 			<section>
-				<Dropdown options={array} handleChange={this.handleChange} id="drop" value={this.state.drop} />
-				<InputMail placeholder={Math.random()*10} id={Math.random()} icon="phone"  />
-				<InputNumber placeholder={Math.random()*10} id={Math.random()} icon="phone"  />
-				<InputText  placeholder={Math.random()*10} id={Math.random()} icon="phone" />>
+				<Footer 
+					bgImage="https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg" 
+					phones={[
+						"+55 (11) 98765-4321", 
+						"+55 (11) 98765-4321"
+					]}	
+					emails={[
+						"email@meuemail.com",
+						"email@meuemail.com",
+						"email@meuemail.com",
+					]}
+				/>
 			</section>
 		);
 	}
