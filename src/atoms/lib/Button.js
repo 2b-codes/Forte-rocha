@@ -7,13 +7,13 @@ export default class Button extends Component{
 
 		const {
 			children,
-			onClick,
+			clickAction,
 			id,
 			className,
 			type
 		} = this.props;
 		return (
-			<button type={type} className="waves-effect waves-light btn" id={id} onClick={onClick} >{children || "Enviar"}</button>
+			<button type={type} className="waves-effect waves-light btn" id={id} onClick={clickAction} >{children || "Enviar"}</button>
 		);
 		
 	}	
@@ -23,7 +23,7 @@ export default class Button extends Component{
 Button.propTypes={
 	// especifica qual o valor espera para tratativa
 	children: PropTypes.node.isRequired,
-	onClick: PropTypes.func.isRequired,
+	clickAction: PropTypes.func.isRequired,
 	id: PropTypes.string,
 	className: PropTypes.string,
 	type: PropTypes.string,
