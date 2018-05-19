@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "../organisms/lib/Footer";
+
 import InputMask from "react-input-mask";
+import ContactUsForm from "../organisms/lib/ContactUsForm";
 
 export default class Welcome extends React.Component {
 
@@ -26,18 +27,7 @@ export default class Welcome extends React.Component {
 
 		return(			
 			<section>
-				<Footer 
-					bgImage="https://wallpaperbrowse.com/media/images/soap-bubble-1958650_960_720.jpg" 
-					phones={[
-						"+55 (11) 98765-4321", 
-						"+55 (11) 98765-4321"
-					]}	
-					emails={[
-						"email@meuemail.com",
-						"email@meuemail.com",
-						"email@meuemail.com",
-					]}
-				/>
+				<ContactUsForm />
 			</section>
 		);
 	}

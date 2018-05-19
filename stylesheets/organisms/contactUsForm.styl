@@ -1,0 +1,35 @@
+.contact-us
+  text-align center
+  position relative
+
+  >.title
+    font-size: 2em
+    color $black
+  
+  >.others-contacts
+    >.contact-option
+      display inline-block
+      max-width 300px
+      margin 0 20px 
+      font-size 1.5em
+      font-weight 300
+      @media screen and (max-width: 500px)
+        display block
+        width auto
+        max-width 100%
+        margin 20px 0
+        text-align: center
+        
+
+      >.contact
+        display block
+        &.-item
+          font-size: .7em
+          margin-top 5px
+  >.contact-form-conteiner
+    text-align: center
+    >.contact-form
+      display inline-block
+
+      .input-field
+        max-width 275px
