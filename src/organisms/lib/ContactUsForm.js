@@ -45,7 +45,7 @@ export default class ContactUsForm extends React.Component {
 							handleChange={handleChange}
 							placeholder="Nome"
 							icon="account_circle"
-							/>
+						/>
 						<InputMail 
 							type="email"
 							id="contactUsEmail"
@@ -54,7 +54,7 @@ export default class ContactUsForm extends React.Component {
 							handleChange={handleChange}
 							placeholder="E-mail"
 							icon="email"
-							/>
+						/>
 						<InputNumber 
 							className=""
 							id="contactUsPhone"
@@ -63,7 +63,7 @@ export default class ContactUsForm extends React.Component {
 							type="tel"
 							placeholder="Telefone"
 							icon="phone"
-							/>
+						/>
 						<TextArea 
 							id="contactUsMsg"
 							placeholder="Mensagem"
@@ -71,7 +71,7 @@ export default class ContactUsForm extends React.Component {
 							value={values.contactUsMsg}
 							className=""
 							rows="5"
-							/>
+						/>
 						<div className="actions">
 							<Button 
 								children="Enviar"
