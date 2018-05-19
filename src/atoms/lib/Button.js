@@ -13,7 +13,7 @@ export default class Button extends Component{
 			type
 		} = this.props;
 		return (
-			<button type={type} className="waves-effect waves-light btn" id={id} onClick={onClick} >{children}</button>
+			<button type={type} className="waves-effect waves-light btn" id={id} onClick={onClick} >{children || "Enviar"}</button>
 		);
 		
 	}	

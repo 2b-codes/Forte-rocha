@@ -4,6 +4,7 @@ import InputText from "../../atoms/lib/InputText";
 import InputMail from "../../atoms/lib/InputMail";
 import InputNumber from "../../atoms/lib/InputNumber";
 import TextArea from "../../atoms/lib/TextArea";
+import Button from "../../atoms/lib/Button";
 
 export default class ContactUsForm extends React.Component {
   
@@ -14,7 +15,9 @@ export default class ContactUsForm extends React.Component {
 			email,
 			values = {},
 			handleChange,
+			submitAction,
 		} = this.props;
+
 		return (
 			<div className="contact-us -container">
 				<h3 className="title">Contato</h3>
@@ -33,7 +36,7 @@ export default class ContactUsForm extends React.Component {
 					</div>
 				</div>
 				<div className="contact-form-conteiner">
-					<form className="contact-form">
+					<form onSUbmit={e => e.preventDefault()} className="contact-form">
 						<InputText 
 							id="contactUsName"
 							className=""
@@ -69,6 +72,15 @@ export default class ContactUsForm extends React.Component {
 							className=""
 							rows="5"
 							/>
+						<div className="actions">
+							<Button 
+								children="Enviar"
+								onClick={submitAction}
+								id="sendContactUs"
+								className
+								type="submit"
+							/>
+						</div>
 					</form>
 				</div>
 				<div>Agradecemos a sua procura!</div>
