@@ -1,7 +1,7 @@
 import React from "react";
 
 import InputMask from "react-input-mask";
-import EstimateForm from "../organisms/lib/EstimateForm";
+import InformationExpandable from "../molecules/lib/InformationExpandable";
 
 export default class Welcome extends React.Component {
 
@@ -27,7 +27,8 @@ export default class Welcome extends React.Component {
 
 		return(			
 			<section>
-				<EstimateForm />
+				<InformationExpandable 
+				/>
 			</section>
 		);
 	}
