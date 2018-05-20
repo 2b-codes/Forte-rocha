@@ -1,0 +1,33 @@
+.product-description-page
+  .image-container
+    height 50vh
+    position relative
+    background-color rgba(#CCC, .15)
+    .main-image
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+  .images
+    height 150px
+    width 100%
+    text-align center
+    overflow-x auto
+    overflow-y hidden
+    display inline-flex
+    @media screen and (max-width: 500px)
+      height 75px
+    
+    img
+      max-width 100px
+      max-height 100px
+      margin 20px 10px 0 10px
+      cursor pointer
+      @media screen and (max-width: 500px)
+        max-height 50px
+        max-width 50px
+        
+      &.active
+        opacity .1

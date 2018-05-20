@@ -11,9 +11,9 @@ export default class EstimateProductCard extends React.Component {
 			product = { image: "https://loremflickr.com/320/240/brazil", getInformations: () => genericText},
 			clickAction = () => console.log("NOT IMPLEMENTED"),
 			viewProductAction = () => console.log("NOT IMPLEMENTED"),
-      className,
-      addAction,
-      deleteAction,
+			className,
+			addAction,
+			deleteAction,
 		} = this.props;
 
 		return(
@@ -24,17 +24,17 @@ export default class EstimateProductCard extends React.Component {
 				<div className="card-content">
 					<span id={product.product_id} onClick={viewProductAction} className="card-title grey-text text-darken-4">{product.name || "Product Title"}</span>
 					<p className="description activator">{product.getInformations() || genericText}</p>
-          <div className="action-group">
-            <div className="add-container">
-              <div className="dinamic">
-                <label>Quantidade</label>
-                <i className="material-icons remove" id={product.product_id} onClick={e => addAction(e, -1)}>remove_circle_outline</i>
-                <span>{product.quantity || 0 }</span>
-                <i className="material-icons add" id={product.product_id} onClick={e => addAction(e, 1)}>add_circle_outline</i>
-              </div>
-              <i className="material-icons delete-button" id={product.product_id} onClick={deleteAction}>delete</i>
-            </div>
-          </div>
+					<div className="action-group">
+						<div className="add-container">
+							<div className="dinamic">
+								<label>Quantidade</label>
+								<i className="material-icons remove" id={product.product_id} onClick={e => addAction(e, -1)}>remove_circle_outline</i>
+								<span>{product.quantity || 0 }</span>
+								<i className="material-icons add" id={product.product_id} onClick={e => addAction(e, 1)}>add_circle_outline</i>
+							</div>
+							<i className="material-icons delete-button" id={product.product_id} onClick={deleteAction}>add_circle</i>
+						</div>
+					</div>
 				</div>
 			</div>
 		);

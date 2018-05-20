@@ -31,7 +31,7 @@ export default class ProductCard extends React.Component {
 						id={product.product_id} 
 						clickAction={clickAction}
 						children="Adicionar ao orçamento"
-						/>
+					/>
 				</div>
 			</div>
 		);
