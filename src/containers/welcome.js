@@ -1,7 +1,7 @@
 import React from "react";
 
 import InputMask from "react-input-mask";
-import ProductCard from "../organisms/lib/ProductCard";
+import EstimateProductCard from "../organisms/lib/EstimateProductCard";
 
 export default class Welcome extends React.Component {
 
@@ -27,32 +27,7 @@ export default class Welcome extends React.Component {
 
 		return(			
 			<section>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
-				<ProductCard/>
+				<EstimateProductCard/>
 			</section>
 		);
 	}
